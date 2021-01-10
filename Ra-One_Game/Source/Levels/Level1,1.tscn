@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Level/WhatsApp Image 2021-01-10 at 00.18.53.jpeg" type="Texture" id=1]
+[ext_resource path="res://Source/Main/ChangeSceneButton.tscn" type="PackedScene" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WhatsApp Image 2021-01-10 at 001853" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChangeSceneButtton" parent="WhatsApp Image 2021-01-10 at 001853" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = 34.0
+margin_right = 150.0
+margin_bottom = 164.0
+change_scene = "res://Source/Levels/Level1.tscn"

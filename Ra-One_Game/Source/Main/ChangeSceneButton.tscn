@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Play.gd" type="Script" id=1]
+[ext_resource path="res://Source/Main/new_dynamicfont.tres" type="DynamicFont" id=2]
+
+[node name="ChangeSceneButtton" type="Button"]
+margin_right = 300.0
+margin_bottom = 130.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Play"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="." to="." method="_on_ChangeSceneButtton_button_up"]

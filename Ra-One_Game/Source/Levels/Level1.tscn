@@ -1,0 +1,168 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Source/Actors/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Source/Levels/Level2.1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Obejcts/coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Actors/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Obejcts/Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Mario/Mario/tileset.png" type="Texture" id=6]
+[ext_resource path="res://green.png" type="Texture" id=7]
+[ext_resource path="res://Source/Main/UserInterface.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Source/Actors/Enemy2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Source/Obejcts/coin2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Music/2019-03-17_-_Too_Crazy_-_David_Fesliyan.ogg" type="AudioStream" id=11]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "tileset.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 80, 80 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[node name="Level1" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [ 4080.0, 9043.0 ]
+}
+
+[node name="UserLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="Control" parent="UserLayer" instance=ExtResource( 8 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="background" type="TextureRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 80, 80 )
+cell_custom_transform = Transform2D( -64, 0, 0, 64, 0, 0 )
+collision_layer = 8
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 111, 0, 0, 112, 0, 0, 65536, 0, 0, 65537, 0, 0, 65647, 0, 0, 65648, 0, 0, 131072, 0, 0, 131073, 0, 0, 131183, 0, 0, 131184, 0, 0, 196608, 0, 0, 196609, 0, 0, 196693, 0, 0, 196694, 0, 0, 196719, 0, 0, 196720, 0, 0, 262144, 0, 0, 262145, 0, 0, 262229, 0, 0, 262230, 0, 0, 262255, 0, 0, 262256, 0, 0, 327680, 0, 0, 327681, 0, 0, 327765, 0, 0, 327766, 0, 0, 327791, 0, 0, 327792, 0, 0, 393216, 0, 0, 393217, 0, 0, 393299, 0, 0, 393300, 0, 0, 393301, 0, 0, 393302, 0, 0, 393327, 0, 0, 393328, 0, 0, 458752, 0, 0, 458753, 0, 0, 458770, 0, 0, 458771, 0, 0, 458803, 0, 0, 458804, 0, 0, 458805, 0, 0, 458835, 0, 0, 458836, 0, 0, 458837, 0, 0, 458838, 0, 0, 458857, 0, 0, 458858, 0, 0, 458859, 0, 0, 458860, 0, 0, 458861, 0, 0, 458862, 0, 0, 458863, 0, 0, 458864, 0, 0, 524288, 0, 0, 524289, 0, 0, 524306, 0, 0, 524307, 0, 0, 524339, 0, 0, 524340, 0, 0, 524341, 0, 0, 524371, 0, 0, 524372, 0, 0, 524373, 0, 0, 524374, 0, 0, 524393, 0, 0, 524394, 0, 0, 524395, 0, 0, 524396, 0, 0, 524397, 0, 0, 524398, 0, 0, 524399, 0, 0, 524400, 0, 0, 589824, 0, 0, 589825, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589875, 0, 0, 589876, 0, 0, 589877, 0, 0, 589903, 0, 0, 589904, 0, 0, 589905, 0, 0, 589906, 0, 0, 589907, 0, 0, 589908, 0, 0, 589909, 0, 0, 589910, 0, 0, 589929, 0, 0, 589930, 0, 0, 589931, 0, 0, 589932, 0, 0, 589933, 0, 0, 589934, 0, 0, 589935, 0, 0, 589936, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0, 655380, 0, 0, 655381, 0, 0, 655382, 0, 0, 655383, 0, 0, 655384, 0, 0, 655385, 0, 0, 655386, 0, 0, 655387, 0, 0, 655388, 0, 0, 655389, 0, 0, 655390, 0, 0, 655391, 0, 0, 655392, 0, 0, 655393, 0, 0, 655394, 0, 0, 655395, 0, 0, 655396, 0, 0, 655397, 0, 0, 655398, 0, 0, 655399, 0, 0, 655400, 0, 0, 655401, 0, 0, 655402, 0, 0, 655403, 0, 0, 655404, 0, 0, 655405, 0, 0, 655406, 0, 0, 655407, 0, 0, 655408, 0, 0, 655409, 0, 0, 655410, 0, 0, 655411, 0, 0, 655412, 0, 0, 655413, 0, 0, 655414, 0, 0, 655415, 0, 0, 655416, 0, 0, 655417, 0, 0, 655418, 0, 0, 655419, 0, 0, 655420, 0, 0, 655421, 0, 0, 655422, 0, 0, 655423, 0, 0, 655424, 0, 0, 655425, 0, 0, 655426, 0, 0, 655427, 0, 0, 655428, 0, 0, 655429, 0, 0, 655430, 0, 0, 655431, 0, 0, 655432, 0, 0, 655433, 0, 0, 655434, 0, 0, 655435, 0, 0, 655436, 0, 0, 655437, 0, 0, 655438, 0, 0, 655439, 0, 0, 655440, 0, 0, 655441, 0, 0, 655442, 0, 0, 655443, 0, 0, 655444, 0, 0, 655445, 0, 0, 655446, 0, 0, 655447, 0, 0, 655448, 0, 0, 655449, 0, 0, 655450, 0, 0, 655451, 0, 0, 655452, 0, 0, 655453, 0, 0, 655454, 0, 0, 655455, 0, 0, 655456, 0, 0, 655457, 0, 0, 655458, 0, 0, 655459, 0, 0, 655460, 0, 0, 655461, 0, 0, 655462, 0, 0, 655463, 0, 0, 655464, 0, 0, 655465, 0, 0, 655466, 0, 0, 655467, 0, 0, 655468, 0, 0, 655469, 0, 0, 655470, 0, 0, 655471, 0, 0, 655472, 0, 0, 720896, 0, 0, 720897, 0, 0, 720898, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 720916, 0, 0, 720917, 0, 0, 720918, 0, 0, 720919, 0, 0, 720920, 0, 0, 720921, 0, 0, 720922, 0, 0, 720923, 0, 0, 720924, 0, 0, 720925, 0, 0, 720926, 0, 0, 720927, 0, 0, 720928, 0, 0, 720929, 0, 0, 720930, 0, 0, 720931, 0, 0, 720932, 0, 0, 720933, 0, 0, 720934, 0, 0, 720935, 0, 0, 720936, 0, 0, 720937, 0, 0, 720938, 0, 0, 720939, 0, 0, 720940, 0, 0, 720941, 0, 0, 720942, 0, 0, 720943, 0, 0, 720944, 0, 0, 720945, 0, 0, 720946, 0, 0, 720947, 0, 0, 720948, 0, 0, 720949, 0, 0, 720950, 0, 0, 720951, 0, 0, 720952, 0, 0, 720953, 0, 0, 720954, 0, 0, 720955, 0, 0, 720956, 0, 0, 720957, 0, 0, 720958, 0, 0, 720959, 0, 0, 720960, 0, 0, 720961, 0, 0, 720962, 0, 0, 720963, 0, 0, 720964, 0, 0, 720965, 0, 0, 720966, 0, 0, 720967, 0, 0, 720968, 0, 0, 720969, 0, 0, 720970, 0, 0, 720971, 0, 0, 720972, 0, 0, 720973, 0, 0, 720974, 0, 0, 720975, 0, 0, 720976, 0, 0, 720977, 0, 0, 720978, 0, 0, 720979, 0, 0, 720980, 0, 0, 720981, 0, 0, 720982, 0, 0, 720983, 0, 0, 720984, 0, 0, 720985, 0, 0, 720986, 0, 0, 720987, 0, 0, 720988, 0, 0, 720989, 0, 0, 720990, 0, 0, 720991, 0, 0, 720992, 0, 0, 720993, 0, 0, 720994, 0, 0, 720995, 0, 0, 720996, 0, 0, 720997, 0, 0, 720998, 0, 0, 720999, 0, 0, 721000, 0, 0, 721001, 0, 0, 721002, 0, 0, 721003, 0, 0, 721004, 0, 0, 721005, 0, 0, 721006, 0, 0, 721007, 0, 0, 721008, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 266, 484 )
+
+[node name="Camera2D" parent="Player" index="2"]
+position = Vector2( 33, -79 )
+limit_top = -1000
+limit_right = 9043
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="coin22" parent="Coins" instance=ExtResource( 10 )]
+position = Vector2( 717, 733 )
+
+[node name="coin23" parent="Coins" instance=ExtResource( 10 )]
+position = Vector2( 836, 733 )
+
+[node name="coin24" parent="Coins" instance=ExtResource( 10 )]
+position = Vector2( 942, 733 )
+
+[node name="coin4" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 1308, 650 )
+
+[node name="coin5" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 1530, 493 )
+
+[node name="coin6" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 2216, 739 )
+
+[node name="coin7" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 2360, 737 )
+
+[node name="coin8" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 2502, 741 )
+
+[node name="coin9" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 3755, 736 )
+
+[node name="coin" parent="Coins" instance=ExtResource( 10 )]
+position = Vector2( 3756, 519 )
+
+[node name="coin11" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 4826, 704 )
+
+[node name="coin12" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 4961, 708 )
+
+[node name="coin13" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 5388, 519 )
+
+[node name="coin14" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 5545, 511 )
+
+[node name="coin15" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 6685, 155 )
+
+[node name="coin2" parent="Coins" instance=ExtResource( 10 )]
+position = Vector2( 6898, 155 )
+
+[node name="coin17" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 7187, 548 )
+
+[node name="coin18" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 7437, 652 )
+
+[node name="coin19" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 8185, 723 )
+
+[node name="coin20" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 8335, 730 )
+
+[node name="coin3" parent="Coins" instance=ExtResource( 10 )]
+position = Vector2( 8335, 510 )
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 1 )]
+position = Vector2( 1813, 740 )
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 1 )]
+position = Vector2( 3020, 738 )
+speed = Vector2( 400, 1000 )
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 1 )]
+position = Vector2( 4579, 712 )
+speed = Vector2( 400, 1000 )
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 9 )]
+position = Vector2( 7751, 738 )
+
+[node name="Portal" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8636, 383 )
+nextScene = ExtResource( 2 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+
+[editable path="Player"]

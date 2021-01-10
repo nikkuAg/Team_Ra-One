@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/WhatsApp-Audio-2021-01-10-at-002.ogg-c202fb2add000dd6eabe05852002a276.oggstr"
+
+[deps]
+
+source_file="res://Music/WhatsApp-Audio-2021-01-10-at-002.ogg"
+dest_files=[ "res://.import/WhatsApp-Audio-2021-01-10-at-002.ogg-c202fb2add000dd6eabe05852002a276.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

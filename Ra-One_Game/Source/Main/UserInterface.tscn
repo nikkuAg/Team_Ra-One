@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Source/Main/new_dynamic1font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Source/Main/new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Source/Main/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Main/ChangeSceneButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Main/Quit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Source/Main/Retry.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Scripts/UserInterface.gd" type="Script" id=7]
+[ext_resource path="res://Music/WhatsApp-Audio-2021-01-10-at-002.ogg" type="AudioStream" id=8]
+
+[node name="Control" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -139.0
+margin_top = 30.0
+margin_right = -31.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 1 )
+text = "Score: %s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.196078 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="PauseOverlay" instance=ExtResource( 3 )]
+margin_top = 124.0
+margin_bottom = 267.0
+text = "Paused"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -292.5
+margin_top = -55.0
+margin_right = 292.5
+margin_bottom = 168.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Retry" parent="PauseOverlay/VBoxContainer" instance=ExtResource( 6 )]
+margin_right = 585.0
+margin_bottom = 71.0
+custom_fonts/font = ExtResource( 2 )
+text = "Retry Level"
+
+[node name="ChangeSceneButtton2" parent="PauseOverlay/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 75.0
+margin_right = 585.0
+margin_bottom = 147.0
+text = "Return to Main Menu"
+change_scene = "res://Source/Main/Mainfinal.tscn"
+
+[node name="Quit" parent="PauseOverlay/VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 151.0
+margin_right = 585.0
+margin_bottom = 223.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+max_distance = 2003.0

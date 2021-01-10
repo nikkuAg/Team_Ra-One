@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/2019-03-17_-_Too_Crazy_-_David_Fesliyan.ogg-80c2ae9c26df7c81aecacbac99a3c784.oggstr"
+
+[deps]
+
+source_file="res://Music/2019-03-17_-_Too_Crazy_-_David_Fesliyan.ogg"
+dest_files=[ "res://.import/2019-03-17_-_Too_Crazy_-_David_Fesliyan.ogg-80c2ae9c26df7c81aecacbac99a3c784.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
