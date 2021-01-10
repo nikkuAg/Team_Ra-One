@@ -1,11 +1,12 @@
 # Team_Ra-One
 Hackathon(Team Ra-One)
     Team Members:
-        Divyansh Agarwal (Leader)
-            email: divyansh_a@ma.iitr.ac.in
-            enrollment no: 20312012
-        Rupam Gumber
-        Utkarsh Raj
+Divyansh Agarwal (Leader)
+    email: divyansh_a@ma.iitr.ac.in
+    enrollment no: 20312012
+        
+Rupam Gumber
+Utkarsh Raj
         
 This repository has all the projects for the competition Hackathon(Team Ra-One). 
 
