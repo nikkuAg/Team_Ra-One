@@ -1,7 +1,11 @@
 # Team_Ra-One
 Hackathon(Team Ra-One)
-
-This repository has all the projects for the Hackathon. 
+    Team Members:
+        Divyansh Agarwal (Leader)
+        Rupam Gumber
+        Utkarsh Raj
+        
+This repository has all the projects for the competition Hackathon(Team Ra-One). 
 
 The final game is located at the location
     Team_Ra-One/Ra-One_Game/Game/GameRa-One.exe
