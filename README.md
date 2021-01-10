@@ -9,6 +9,8 @@ Hackathon(Team Ra-One)
         
 This repository has all the projects for the competition Hackathon(Team Ra-One). 
 
+We have made a game Ra-One which is a single player game played on Windows, you have to collect coins and kill villians/enemies. This games has 3 levels with different enemies and 2 types of coins.
+
 The final game is located at the location
     Team_Ra-One/Ra-One_Game/Game/GameRa-One.exe
     
