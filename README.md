@@ -1,4 +1,7 @@
 # Team_Ra-One
+
+To play the game(Ra-One) download both the files in the games folder (i.e GameRa-One.exe, and GameRa-One.pck) at the location: Team_Ra-One/Ra-One_Game/Game/
+
 Hackathon(Team Ra-One)
     Team Members:
 Divyansh Agarwal (Leader)
@@ -14,7 +17,7 @@ We have made a game Ra-One which is a single player game played on Windows, you 
 
 The final game is located at the location
     Team_Ra-One/Ra-One_Game/Game/GameRa-One.exe
-    To play the game download both the flies in the games folder (i.e GameRa-One.exe, and GameRa-One.pck) 
+    To play the game download both the files in the games folder (i.e GameRa-One.exe, and GameRa-One.pck) 
     
 To open the complete project in GOTDOT engine open the engine and add the project.gotdot located at
     Team_Ra-One/Ra-One_Game/project.gotdot
